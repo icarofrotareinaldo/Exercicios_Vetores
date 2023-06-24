@@ -1,0 +1,184 @@
+1. Escreva um algoritmo em que receba dez números do usuário e armazene em um vetor o
+quadrado de cada número. Após isso, o algoritmo deve imprimir todos os valores
+armazenados.
+
+let vetor = [];
+
+for (let i = 0; i < 10; i++) {
+    let n = Number(prompt(`Digite o ${i + 1}º número`))
+    vetor[i] = n * n;
+}
+
+document.write(`vetor= [${vetor}]<br>`)
+
+for (let i = 0; i < vetor.length; i++) {
+    document.write(`vetor[${i}] = [${vetor[i]}]<br>`);
+} 
+
+2. Crie um algoritmo que leia um vetor de 10 nu meros inteiros. Em seguida, calcule e es-
+creva o somato rio dos valores deste vetor.
+
+let numero=[];
+let soma=0;
+
+for(let i=0; i<10; i++){
+    numero[i] = Number(prompt(`Digite o ${i+1}º número`));
+    soma= soma+numero[i];
+}
+
+document.write(`numeros= [${numero}]<br>`);
+document.write(`A soma dos numeros é ${soma}`);
+
+3. Escreva um algoritmo que leia um vetor com 8 posiço es de nu meros inteiros. Em seguida,
+leia um novo valor do usua rio e verifique se valor se encontra no vetor. Se estiver, informe
+a posiça o desse elemento no vetor. Caso o elemento na o esteja no vetor, apresente uma
+mensagem informando “O nu mero na o se encontra no vetor”.
+
+let v=[];
+for(let i = 0; i<8;i++){
+    v[i]= Number(prompt(`Digite o ${i+1}º número`));
+}
+
+let n =  Number(prompt(`Digite o número que deseja marcar`));
+
+let posicao = -1;
+
+for(let i = 0; i<v.length;i++){
+    if(n==v[i]){
+        posicao=i;
+        document.write(`${n} encotrado na posição ${posicao}<br>`);
+    }
+}
+
+if (posicao==-1){
+    document.write(`${n} não encotrado `);
+}
+
+4. Escreva um algoritmo que lê um vetor de 10 números e os escreva, imprima a posição e o
+elemento do vetor.
+
+let vetor=[]
+
+for(i = 0 ; i<10;i++){
+    vetor[i]= Math.floor(Math.random(vetor)*100) ;
+}
+document.write(`${vetor[i]}`)
+
+for(i = 0 ; i<vetor.length;i++){
+   document.write(`Posição: ${i} | Elemento: ${vetor[i]}<br>`)
+}
+
+5. Faça um algoritmo que leia 10 valores e os escreva na ordem contrária à que foram
+digitados.
+
+var vetor =[]
+
+for(i=0;i<10;i++){
+    vetor[i]=Number(prompt(`Digite o ${i+1}º numero`))
+
+}
+document.write(`vetor=[${vetor}]<br>`)
+
+for(let i=0, j = vetor.length-1; i<(vetor.length/2); i++, j--)
+{
+    let aux= vetor[j]
+    vetor[j]=vetor[i]
+    vetor[i]=aux  
+
+}
+
+document.write(`vetor=[${vetor[i]}]`)
+
+6. Faça um algoritmo que leia 10 valores e conte quantos são pares e quantos são ímpares.
+
+var vetor=[]
+let qPar=0;
+let qImpar=0;
+
+for (i=0;i<10;i++){
+vetor[i]=Number(prompt(`Digite o ${i+1} número`))
+if  ( vetor[i]% 2 == 0 ) {
+            qPar ++ ;
+        }
+        else {
+            qImpar ++ ;
+            
+        }
+}
+document.write(`[${vetor}]<br>`)
+    
+document.write(`A quantidade de numero pares é ${qPar}<br>`)
+
+document.write(`A quantidade de numeros ímpares é ${qImpar} `)
+
+7. Escrever um algoritmo que lê um vetor de 10 números. Encontre, a seguir, o menor
+elemento e a sua posição no vetor N e escreva: "O menor elemento de N é = ... e a sua
+posição é ... ".
+
+var n =[]
+
+for(i=0;i<10;i++){
+    n[i]=Number(prompt(`Digite o ${i+1}º numero`))
+
+}
+document.write(`N=[${n}]<br>`)
+
+let posicao_menor=0;
+
+for(i=0;i<10;i++){
+    if(n[i]< n[posicao_menor]){
+        posicao_menor=i;
+    }
+}
+
+document.write(`O menor elemento de N é ${n[posicao_menor]} e sua posição é ${posicao_menor}`)
+
+8. Faça um algoritmo com 3 vetores. Cada um com 10 espaços. Chame-os de original, pares e
+ímpares. Após preencher o original testes seus valores, e dependendo se eles são pares ou
+ímpares, vá colocando-os nos respectivos vetores.
+
+let original=[]
+let impares=[]
+let pares=[]
+
+for(i=0; i<10 ; i++){
+    original[i]= Number(prompt(`Digite o ${i+1}º número`));
+}
+
+for(i=0; i<10 ; i++){
+    if(original[i]%2==0){
+        pares.push(original[i]);
+    } else{
+        impares.push(original[i])
+    }
+}
+document.write(`Original= [${original}]<br>`);
+document.write(`Pares= [${pares}]<br>`);
+document.write(`Impares= [${impares}]<br>`);
+
+9. Escreva um algoritmo que receba a altura de 10 atletas. Esse algoritmo deve imprimir a
+altura daqueles atletas que tem altura maior que a média.
+
+var altura=[]
+let soma=0
+let maior=0
+for(i=0;i<10;i++){
+    altura[i]=Number(prompt(`Digite o ${i+1}º numero`))
+    soma+=altura[i]
+    if(media < altura[maior]){
+        maior=i
+    }
+
+}
+document.write(`Alturas dos atletas=[${altura}] <br>`)
+document.write(`A medias das alturas dos altetas é ${media} <br>`)
+
+let media=soma/altura.length;
+
+for(i=0;i<10;i++){
+    if(media < altura[maior]){
+        maior=i
+        document.write(`Alturas dos atletas maior do que a media é ${altura[maior]}`)
+    }
+
+}
